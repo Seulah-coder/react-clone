@@ -2,6 +2,8 @@ import {useParams} from "react-router-dom";
 import {useEffect, useState} from "react";
 
 function Detail(){
+
+
     const {id} = useParams();
     const [movie, setMovie] = useState([]);
     const getMovie = async () => {
@@ -11,6 +13,7 @@ function Detail(){
     }
     useEffect(() => {
         getMovie();
+        console.log("detail");
 
     }, []);
     return (<div> <h1>Detail</h1>
