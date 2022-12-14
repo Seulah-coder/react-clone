@@ -16,6 +16,7 @@ function Home(){
         getMovies();
     },[]);
     console.log(movies);
+    console.log("222");
     return (<div>
             {loading ? <h1>Loading....</h1> :
                 <div>{movies.map((movie) => (

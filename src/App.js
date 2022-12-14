@@ -3,8 +3,9 @@ import Home from "./routes/Home";
 import Detail from "./routes/Detail";
 
 function App() {
+    console.log("111");
     return (
-        <Router>
+        <Router basename={process.env.PUBLIC_URL}>
             <Routes>
                 <Route basename={process.env.PUBLIC_URL + "/movie/:id"} element={<Detail />}/>
                 <Route basename={process.env.PUBLIC_URL + "/"} element={<Home />}/>
